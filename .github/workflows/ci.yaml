@@ -27,7 +27,7 @@ jobs:
       uses: ./.github/actions/tag
       with:
         tag_name: test-with-sha-tag
-        tag_ref: ${{ github.sha }}
+        tag_ref: ${{ env.GITHUB_SHA }}
         github_token: ${{ secrets.GITHUB_TOKEN }}
   test-with-branch:
     name:
