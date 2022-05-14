@@ -8,7 +8,14 @@ on:
       tag_ref:
         type: string
         required: false
-
+  workflow_call:
+    inputs:
+      tag_name:
+        type: string
+        required: true
+      tag_ref:
+        type: string
+        required: false
 
 jobs:
   test:
