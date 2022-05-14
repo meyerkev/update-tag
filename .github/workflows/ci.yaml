@@ -31,7 +31,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Make the tag
-      uses: ./.github/actions/tag.yaml
+      uses: ./.github/actions/tag
       with:
         tag_name: test-empty-tag
   test-with-sha:
@@ -40,7 +40,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Make the tag
-      uses: ./.github/actions/tag.yaml
+      uses: ./.github/actions/tag
       with:
         tag_name: test-with-sha-tag
         tag_ref: ${{ github.sha }}
@@ -50,7 +50,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Make the tag
-      uses: ./.github/actions/tag.yaml
+      uses: ./.github/actions/tag
       with:
         tag_name: test-with-branch-tagh
         # This is a tag
