@@ -38,6 +38,17 @@ jobs:
       uses: ./.github/actions/tag
       with:
         tag_name: test-with-branch-tag
+        tag_ref: master
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+  test-with-branch:
+    name:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Make the tag
+      uses: ./.github/actions/tag
+      with:
+        tag_name: test-with-tag-tag
         # This is a tag
         tag_ref: tests-will-break-if-deleted
         github_token: ${{ secrets.GITHUB_TOKEN }}
