@@ -38,7 +38,7 @@ jobs:
       uses: ./.github/actions/tag
       with:
         tag_name: test-with-branch-tag
-        tag_ref: master
+        tag_ref: main
         github_token: ${{ secrets.GITHUB_TOKEN }}
   test-with-tag:
     name:
