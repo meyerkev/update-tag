@@ -3,6 +3,7 @@ description: Tag the repo
 runs:
   using: "composite"
   steps:
+  - uses: @actions/checkout@v3
   - name: Make the tag
     uses: ./
     with:
