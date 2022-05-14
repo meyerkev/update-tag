@@ -1,5 +1,16 @@
 name: tag
 description: Tag the repo
+inputs:
+  github_token:
+    description: 'A Github PAT'
+    required: true
+	tag_name:
+		type: string
+		required: true
+	tag_ref:
+		type: string
+		required: false
+
 runs:
   using: "composite"
   steps:
@@ -9,4 +20,4 @@ runs:
       tag_name: ${{ github.event.inputs.tag_name }}
       tag_ref: ${{ github.event.inputs.tag_ref }}
     env:
-      GITHUB_TOKEN: ${{ env.GITHUB_TOKEN || secrets.GITHUB_TOKEN }}
+      GITHUB_TOKEN: ${{ inputs.github_token }}
