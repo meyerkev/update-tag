@@ -1,4 +1,4 @@
-name: "Update Tag"
+name: "Update Tag to random ref"
 description: "Update the provided tag in the GitHub repo"
 author: "Richard Simko"
 inputs:
