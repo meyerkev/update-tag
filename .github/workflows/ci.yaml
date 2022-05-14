@@ -40,7 +40,7 @@ jobs:
         tag_name: test-with-branch-tag
         tag_ref: master
         github_token: ${{ secrets.GITHUB_TOKEN }}
-  test-with-branch:
+  test-with-tag:
     name:
     runs-on: ubuntu-latest
     steps:
