@@ -62,7 +62,7 @@ async function run() {
       return;
     }
 
-    console.log(`Found ref ${tagRef} as commit ${sha}`);
+    console.log(`Found ref ${tagRef || GITHUB_SHA} as commit ${sha}`);
 
     let ref;
     try {
